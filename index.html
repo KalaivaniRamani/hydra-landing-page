@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydra – Sustainable Infrastructure for the Future</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="">
+  <section id="hero" class="relative w-full h-screen bg-cover bg-center bg-no-repeat text-white" style="background-image: url('images/hero-banner.jpg');">
+    <div class="absolute inset-0 bg-black/30 z-0"></div>
+
+    <header class="relative z-10 flex w-full items-center justify-between px-4 py-4 lg:px-8">
+      <div class="flex items-center bg-white px-4 py-2 lg:py-6 rounded-lg shadow-md">
+        <a href="#" class="flex cursor-pointer items-center whitespace-nowrap text-2xl font-black mr-4 text-black">
+          @Hydra
+        </a>
+        <nav class="hidden lg:flex gap-4 xl:gap-6 text-black nav-links">
+          <a href="#projects">PROJECT</a>
+          <a href="#about">ABOUT</a>
+          <a href="#leadership">CAREERS</a>
+          <a href="#services">SOLUTIONS</a>
+          <a href="#impact">NEWS</a>
+        </nav>
+      </div>
+
+      <div class="hidden lg:block align-center items-center justify-center">
+        <button class="secondary-btn">
+          Contact
+          <div class="secondary-btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="icon-sm">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      <!-- Mobile nav toggle -->
+      <input type="checkbox" class="peer hidden" id="navbar-open" />
+      <label class="cursor-pointer lg:hidden z-50" for="navbar-open">
+        <span class="sr-only">Toggle Navigation</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+    </header>
+
+    <!-- Hero Content -->
+    <div id="hero" class="relative z-10 flex flex-col justify-center items-start h-[80%] px-6">
+      <div class="max-w-4xl text-center">
+        <h1 class="heading-hero text-white">
+          Sustainable Solutions for a Better Future
+        </h1>
+        <p class="paragraph-hero">
+          Revolutionizing manufacturing and engineering with AI technology that optimizes production workflows, improves product quality, and reduces costs.
+        </p>
+        <div class="mt-6 flex items-center justify-center group">
+          <button class="btn-main">
+            Start a Project
+            <div class="btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="mobile-nav" class="fixed inset-0 z-[9999] bg-white hidden flex-col pt-32 px-6 lg:hidden transition-all duration-300 overflow-y-auto">
+    <ul class="flex flex-col space-y-6">
+      <li><a href="#projects" class="block text-xl text-black hover:text-[#122023] py-2 border-b border-gray-200">PROJECT</a></li>
+      <li><a href="#about" class="block text-xl text-black hover:text-[#122023] py-2 border-b border-gray-200">ABOUT</a></li>
+      <li><a href="#leadership" class="block text-xl text-black hover:text-[#122023] py-2 border-b border-gray-200">CAREERS</a></li>
+      <li><a href="#services" class="block text-xl text-black hover:text-[#122023] py-2 border-b border-gray-200">SOLUTIONS</a></li>
+      <li><a href="#impact" class="block text-xl text-black hover:text-[#122023] py-2 border-b border-gray-200">NEWS</a></li>
+      <li class="mt-8">
+        <button class="w-full flex items-center justify-center rounded-lg px-6 py-4 text-xl bg-[#122023] text-white gap-x-3 hover:bg-[#1a2d30] transition">
+          Contact
+          <div class="bg-white text-black px-1 py-1 rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </div>
+        </button>
+      </li>
+    </ul>
+
+    <button class="absolute top-6 right-6 p-2" id="close-nav">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <section id="about">
+    <div class="py-16 px-4">
+      <span class="section-label">Introduction</span>
+      <p class="about-text">
+        Hydra is a pioneering clean energy company that delivers innovative infrastructure
+        solutions to power intensive industries, driving a more sustainable future for
+        generations to come.
+      </p>
+      <button class="secondary-btn">
+        Learn More
+        <div class="secondary-btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="icon-sm">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="bg-white pt-16 pb-4 px-4">
+      <span class="section-label">Our Services</span>
+      <h2 class="my-6 text-3xl">What We Do</h2>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="service-card group">
+          <span class="hover-icon">+</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-12 h-12 mb-4 group-hover:hidden">
+            <path fill="currentColor" d="M24 3H8a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm0 2v6H8V5ZM8 19v-6h16v6Zm0 8v-6h16v6Z"/>
+            <circle cx="11" cy="8" r="1" fill="currentColor"/>
+            <circle cx="11" cy="16" r="1" fill="currentColor"/>
+            <circle cx="11" cy="24" r="1" fill="currentColor"/>
+          </svg>
+          <p class="group-hover:hidden text-xl">Data Centers</p>
+          <div class="hidden group-hover:block">
+            <p class="bg-[#1a2c30] text-[#e1fcad] px-3 py-1 inline-block">Overview</p>
+            <p class="text-sm mt-2">Scalable infrastructure solution tailored to cloud service.</p>
+          </div>
+        </div>
+
+        <div class="service-card group">
+          <span class="hover-icon">+</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mb-4 group-hover:hidden">
+            <path fill="currentColor" d="M3.103 10.107c0-4.244 3.445-7.607 7.733-7.607c3.19 0 5.912 1.858 7.099 4.563l.01.022l.001.006C21.348 7.345 24 10.095 24 13.536C24 17.148 21.076 20 17.431 20H5.017C2.23 20 0 17.83 0 15.06a4.899 4.899 0 0 1 3.112-4.581a7.696 7.696 0 0 1-.009-.372ZM10.836 4c-3.485 0-6.233 2.717-6.233 6.107c0 .284.022.602.052.756a.75.75 0 0 1-.552.869c-1.52.385-2.603 1.712-2.603 3.328c0 1.917 1.532 3.44 3.517 3.44h12.414c2.843 0 5.069-2.206 5.069-4.964c0-2.759-2.226-4.965-5.069-4.965a.75.75 0 0 1-.696-.47l-.179-.446C15.606 5.5 13.424 4 10.836 4Z"/>
+          </svg>
+          <p class="group-hover:hidden text-xl">Cloud Infrastructure</p>
+          <div class="hidden group-hover:block">
+            <p class="bg-[#1a2c30] text-[#e1fcad] px-3 py-1 inline-block">Overview</p>
+            <p class="text-sm mt-2">Seamless integration across public and private clouds.</p>
+          </div>
+        </div>
+
+        <div class="service-card group">
+          <span class="hover-icon">+</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mb-4 group-hover:hidden">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor">
+              <path d="M16.29 2.5H8.017c-1.144 0-1.716 0-2.141.293c-.426.294-.594.804-.93 1.825l-2.308 7c-.585 1.776-.878 2.664-.396 3.273s1.477.609 3.468.609h8.273c1.144 0 1.715 0 2.141-.293c.426-.294.594-.804.93-1.825l2.308-7c.585-1.776.878-2.664.396-3.273S18.281 2.5 16.29 2.5"/>
+              <path d="m22 6l-3.042 9.213c-.444 1.343-.666 2.015-1.227 2.4c-.56.387-1.315.387-2.823.387H4m.5-11H19m-1.5 4H3m8 7.5v3m0 0h2m-2 0H9"/><path d="M15.5 2.5h-5l-4 13h5z"/>
+            </g>
+          </svg>
+          <p class="group-hover:hidden text-xl">Energy</p>
+          <div class="hidden group-hover:block">
+            <p class="bg-[#1a2c30] text-[#e1fcad] px-3 py-1 inline-block">Overview</p>
+            <p class="text-sm mt-2">High-density power for mission-critical operations.</p>
+          </div>
+        </div>
+
+        <div class="service-card group">
+          <span class="hover-icon">+</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16"class="w-12 h-12 mb-4 group-hover:hidden">
+            <path fill="currentColor" fill-rule="evenodd" d="M10.938 15.299c0 .352-1.058.639-1.442.639c-.385 0-1.442-.287-1.442-.639l.744-7.592c0-.353.313-.639.698-.639c.385 0 .698.286.698.639l.744 7.592zM9.974 3.498c0 .28-.21.506-.468.506c-.26 0-.469-.226-.469-.506V.568c0-.279.209-.506.469-.506c.258 0 .468.227.468.506v2.93zm-5.13 5.441c-.265.183-.602.152-.756-.067c-.15-.219-.061-.547.203-.729l2.771-1.92c.264-.182.603-.153.755.066c.152.22.062.547-.203.73l-2.77 1.92zm9.868-.99a.57.57 0 0 1 .188.783a.57.57 0 0 1-.791.154l-2.836-1.823a.57.57 0 0 1-.188-.784a.57.57 0 0 1 .789-.153l2.838 1.823zM9 5h.906v.938H9z"/>
+          </svg>
+          <p class="group-hover:hidden text-xl">Renewables</p>
+          <div class="hidden group-hover:block">
+            <p class="bg-[#1a2c30] text-[#e1fcad] px-3 py-1 inline-block">Overview</p>
+            <p class="text-sm mt-2">Carbon-neutral energy solutions with 24/7 reliability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership" class="w-full">
+    <div class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-[400px] md:h-[500px] lg:h-[600px] w-full text-white overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="images/leadership-banner.jpg" 
+            alt="Leadership Image" 
+            class="full-bg-img" />
+        <div class="overlay-dark"></div>
+      </div>
+      <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
+        <div class="max-w-2xl mx-auto">
+          <h1 class="text-3xl md:text-5xl font-medium mb-6">
+            Discover the Leaders Who Are Transforming the Clean Energy Landscape
+          </h1>
+          <div class="mt-4 flex items-center justify-center group">
+            <button class="leadership-btn">
+              View Leadership
+              <div class="leadership-btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-md">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats">
+    <div class="bg-white px-4 pt-4 pb-16 max-w-[1900px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="relative order-1 md:order-none">
+        <img src="images/stats-banner.png" alt="Company Stats" class="banner-image">
+        <div class="banner-overlay">
+          <h2 class="stats-heading">Our Numbers</h2>
+          <svg class="stats-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="2.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="stats-container">
+        <div class="grid grid-cols-2 gap-y-8 gap-x-4 md:gap-y-16 md:gap-x-8">
+          <div class="stats-item">
+            <p class="stats-number">45%</p>
+            <p class="stats-label">Carbon Reduction</p>
+          </div>
+          <div class="stats-item">
+            <p class="stats-number">200+</p>
+            <p class="stats-label">Carbon Reduction</p>
+          </div>
+          <div class="stats-item">
+            <p class="stats-number">500M</p>
+            <p class="stats-label">Carbon Reduction</p>
+          </div>
+          <div class="stats-item">
+            <p class="stats-number">25%</p>
+            <p class="stats-label">Carbon Reduction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="bg-white py-16 px-4">
+      <span class="section-label">Introduction</span>
+      <h2 class="my-6 text-3xl">Recent Projects</h2>
+
+      <div class="w-full">
+        <div class="swiper overflow-hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide-card">
+              <img src="images/project-1.jpg" alt="Slide 1" class="slide-image">
+              <div class="slide-label">SmartSpark</div>
+            </div>
+            <div class="swiper-slide slide-card">
+              <img src="images/project-2.jpg" alt="Slide 2" class="slide-image">
+              <div class="slide-label">Greenwave</div>
+            </div>
+            <div class="swiper-slide slide-card">
+              <img src="images/project-3.jpg" alt="Slide 3" class="slide-image">
+              <div class="slide-label">EcoCycle</div>
+            </div>
+            <div class="swiper-slide slide-card">
+              <img src="images/project-4.jpg" alt="Slide 4" class="slide-image">
+              <div class="slide-label">SunStream</div>
+            </div>
+            <div class="swiper-slide slide-card">
+              <img src="images/project-5.jpg" alt="Slide 5" class="slide-image">
+              <div class="slide-label">BlueBloom</div>
+            </div>
+            <div class="swiper-slide slide-card">
+              <img src="images/project-6.jpg" alt="Slide 6" class="slide-image">
+              <div class="slide-label">EcoHaven</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-10">
+          <div class="swiper-pagination"></div>
+          <div class="flex gap-2">
+            <div class="swiper-button-prev nav-button">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+              </svg>
+            </div>
+            <div class="swiper-button-next nav-button">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="secondary-btn">
+        View All Projects
+        <div class="secondary-btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="icon-sm">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <section id="impact">
+    <div class="px-4 pt-16">
+      <span class="impact-label">Our Impact</span>
+
+      <p class="impact-text">
+        Hydra's clean energy solutions have made a lasting impact on communities and industries across the Americas, Asia, Europe, and beyond
+      </p>
+
+      <button class="secondary-btn">
+        Learn More
+        <div class="secondary-btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="icon-sm">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </div>
+      </button>
+
+      <img src="../images/world-map.jpg" alt="ContactUs Banner" class="w-[60%]" />
+    </div>
+  </section>
+
+  <section id="contact" class="w-full">
+    <div class="grid lg:grid-cols-2 grid-cols-1 w-full">
+      <div class="w-full h-full">
+        <img src="../images/contact-banner.png" alt="ContactUs Banner"
+          class="contact-img" />
+      </div>
+
+      <div class="w-full bg-[#1a2c30] p-6 lg:p-12">
+        <div class="max-w-lg mx-auto">
+          <div class="contact-heading mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="icon-md">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="m16.49 12 3.75 3.75m0 0-3.75 3.75m3.75-3.75H3.74V4.499" />
+            </svg>
+            <h2 class="uppercase">Your Information</h2>
+          </div>
+
+          <form class="space-y-8">
+            <div class="grid md:grid-cols-2 md:gap-6 gap-4">
+              <div class="input-group">
+                <input type="text" id="floating_first_name" class="input-field" placeholder=" " required />
+                <label for="floating_first_name" class="input-label">First name</label>
+              </div>
+              <div class="input-group">
+                <input type="text" id="floating_last_name" class="input-field" placeholder=" " required />
+                <label for="floating_last_name" class="input-label">Last name</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <input type="email" id="floating_email" class="input-field" placeholder=" " required />
+              <label for="floating_email" class="input-label">Your Email</label>
+            </div>
+            <div class="input-group">
+              <input type="tel" id="floating_phone" class="input-field" placeholder=" " required />
+              <label for="floating_phone" class="input-label">Your Phone</label>
+            </div>
+            <div class="input-group">
+              <textarea id="floating_message" rows="5" class="input-field" placeholder=" " required></textarea>
+              <label for="floating_message" class="input-label">Your Message</label>
+            </div>
+            <button type="submit" class="submit-btn">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer p-4 pt-16">
+    <div class="grid grid-cols-1 md:gap-[4rem] lg:gap-[10rem] md:grid-cols-3">
+      
+      <div class="footer-section">
+        <div class="footer-description">
+          Start your project today! Contact us to learn more and let's work together to achieve your goals.
+        </div>
+        <button class="footer-btn">
+          Start a Project
+          <div class="footer-btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-sm">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer-heading">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-md">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m16.49 12 3.75 3.75m0 0-3.75 3.75m3.75-3.75H3.74V4.499" />
+          </svg>
+          <div class="heading-text">Social</div>
+          <nav class="footer-nav">
+          <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer-heading">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-md">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m16.49 12 3.75 3.75m0 0-3.75 3.75m3.75-3.75H3.74V4.499" />
+          </svg>
+          <div class="heading-text">Pages</div>
+          <nav class="footer-nav">
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Solutions</a></li>
+            <li><a href="#leadership">Careers</a></li>
+            <li><a href="#impact">News</a></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-brand">©Hydra</p>
+      <p class="footer-legal">
+        <a href="#">Licenses</a>
+        <a href="#">Powered by Webflow</a>
+        <a href="#">©2025</a>
+        <a href="#">All Rights Reserved</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+      const swiper = new Swiper('.swiper', {
+        // loop: true,
+        spaceBetween: 10,
+        slidesPerView: 3,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+        on: {
+          slideChange: function () {
+            document.querySelectorAll('.swiper-button-next, .swiper-button-prev').forEach(btn => {
+              if (btn.classList.contains('swiper-button-disabled')) {
+                btn.setAttribute('disabled', true)
+              } else {
+                btn.removeAttribute('disabled');
+              }
+            });
+          }
+        }
+      });
+    </script>
+    <script>
+      const navToggle = document.querySelector('#navbar-open');
+      const mobileNav = document.querySelector('#mobile-nav');
+      const closeNav = document.querySelector('#close-nav');
+
+      navToggle.addEventListener('change', function() {
+        if (this.checked) {
+          mobileNav.classList.remove('hidden');
+          document.body.style.overflow = 'hidden'; // lock scroll
+        } else {
+          mobileNav.classList.add('hidden');
+          document.body.style.overflow = ''; // unlock scroll
+        }
+      });
+
+      closeNav.addEventListener('click', function() {
+        navToggle.checked = false;
+        mobileNav.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+    </script>
+</body>
+</html>

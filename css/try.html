@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3 Slide Carousel with Labels & Arrows</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <style>
+    .swiper-pagination {
+      position: relative !important;
+      margin-top: 1rem;
+    }
+    
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-6xl px-4">
+    <!-- Swiper -->
+    <div class="swiper rounded-lg overflow-hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide relative">
+          <img src="https://picsum.photos/400/300?random=1" alt="Slide 1" class="w-full h-60 object-cover rounded-lg shadow-lg">
+          <div class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 rounded text-sm">Slide One</div>
+        </div>
+        <div class="swiper-slide relative">
+          <img src="https://picsum.photos/400/300?random=2" alt="Slide 2" class="w-full h-60 object-cover rounded-lg shadow-lg">
+          <div class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 rounded text-sm">Slide Two</div>
+        </div>
+        <div class="swiper-slide relative">
+          <img src="https://picsum.photos/400/300?random=3" alt="Slide 3" class="w-full h-60 object-cover rounded-lg shadow-lg">
+          <div class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 rounded text-sm">Slide Three</div>
+        </div>
+        <div class="swiper-slide relative">
+          <img src="https://picsum.photos/400/300?random=4" alt="Slide 4" class="w-full h-60 object-cover rounded-lg shadow-lg">
+          <div class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 rounded text-sm">Slide Four</div>
+        </div>
+        <div class="swiper-slide relative">
+          <img src="https://picsum.photos/400/300?random=5" alt="Slide 5" class="w-full h-60 object-cover rounded-lg shadow-lg">
+          <div class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 rounded text-sm">Slide Five</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls Row -->
+    <div class="flex justify-between items-center mt-4">
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Navigation Arrows -->
+      <div class="flex gap-2">
+        <div class="swiper-button-prev !static !w-10 !h-10 bg-gray-800 text-white rounded-full flex items-center justify-center"></div>
+        <div class="swiper-button-next !static !w-10 !h-10 bg-gray-800 text-white rounded-full flex items-center justify-center"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Init Swiper -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      spaceBetween: 20,
+      slidesPerView: 3,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }
+    });
+  </script>
+
+</body>
+</html>
